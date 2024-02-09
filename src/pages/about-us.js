@@ -11,37 +11,22 @@ import img6 from '../../public/images/img6.jpg'
 
 import Filter from '@/components/FilterDropdown.js/FilterDropdown'
 import FilterDropdown from '@/components/FilterDropdown.js/FilterDropdown'
+import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
 //first we import all the images and component we are gonna use in the AboutUs page
 const AboutUs = () => {
   const imgSectionRef = useRef(null) //The reference we are gonna use in the start now function
-  const cards = [
-    { img: img1, text: 'Waves art' },
-    { img: img2, text: 'Rocks at the beach' },
-    { img: img3, text: 'Blue flower' },
-    { img: img4, text: 'Sunset' },
-    { img: img5, text: 'Fox' },
-    { img: img6, text: 'Night City' }
-  ] //The objects we are using in the cards section
-  const [filteredItems, setFilteredItems] = useState(cards)
-
   const options = [
-    { index: -1, option: 'All' },
-    { index: 0, option: 'Waves art' },
-
-    { index: 1, option: 'Rocks at the beach' },
-    { index: 2, option: 'Blue flower' },
-    { index: 3, option: 'Sunset' },
-    { index: 4, option: 'Fox' },
-    { index: 5, option: 'Night City' }
+    { value: 0, label: 'Waves art', img: img1 },
+    { value: 1, label: 'Rocks at the beach', img: img2 },
+    { value: 2, label: 'Blue flower', img: img3 },
+    { value: 3, label: 'Sunset', img: img4 },
+    { value: 4, label: 'Fox', img: img5 },
+    { value: 5, label: 'Night City', img: img6 }
   ]
-  const handleFilterChange = selectedCategory => {
-    console.log(selectedCategory)
-    console.log(cards)
-    if (selectedCategory != -1) {
-      setFilteredItems([cards[selectedCategory]])
-    } else {
-      setFilteredItems(cards)
-    }
+  const [selectedValues, setSelectedValues] = useState([])
+
+  const handleMultiSelectChange = selectedOptions => {
+    setSelectedValues(selectedOptions)
   }
   return (
     <div>
@@ -58,15 +43,20 @@ const AboutUs = () => {
         ref={imgSectionRef}
       >
         <div className='w-full flex justify-end'>
-          <FilterDropdown
+          <MultiSelectFilter
             options={options}
-            onFilterChange={handleFilterChange}
+            selectedValues={selectedValues}
+            onChange={handleMultiSelectChange}
           />
         </div>
 
-        {filteredItems.map((card, index) => (
-          <PhotoWithText img={card.img} text={card.text} key={index} />
-        ))}
+        {selectedValues.length === 0
+          ? options.map((card, index) => (
+              <PhotoWithText img={card.img} text={card.label} key={index} />
+            ))
+          : selectedValues.map((card, index) => (
+              <PhotoWithText img={card.img} text={card.label} key={index} />
+            ))}
       </section>
     </div>
   )

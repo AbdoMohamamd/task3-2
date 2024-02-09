@@ -26,6 +26,7 @@ const FilterDropdown = ({ options, onFilterChange }) => {
             className='rounded-full'
           >
             {option.option}
+            
           </option>
         ))}
       </select>
