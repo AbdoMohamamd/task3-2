@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
-import Banner from '../../components/Banner/Banner'
-import Form from '../../components/Form/Form'
-import InterestList from '../../components/InterestList/InterestList'
+import Banner from '../components/Banner/Banner'
+import Form from '../components/Form/Form'
+import InterestList from '../components/InterestList/InterestList'
 
-const ContactUs= () => {
+const ContactUs = () => {
   const formSectionRef = useRef(null)
   return (
     <div>

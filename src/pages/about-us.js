@@ -1,9 +1,8 @@
-
 import React, { useRef } from 'react'
-import Banner from '../../components/Banner/Banner'
-import PhotoWithText from '../../components/PhotoWithText/PhotoWithText'
-import img1 from '../../../public/img1.jpg'
-import img2 from '../../../public/img2.jpg'
+import Banner from '../components/Banner/Banner'
+import PhotoWithText from '../components/PhotoWithText/PhotoWithText'
+import img1 from '../../public/img1.jpg'
+import img2 from '../../public/img2.jpg'
 //first we import all the images and component we are gonna use in the AboutUs page
 const AboutUs = () => {
   const imgSectionRef = useRef(null) //The reference we are gonna use in the start now function
