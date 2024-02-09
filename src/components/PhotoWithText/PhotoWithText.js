@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const PhotoWithText = ({ img, text }) => {
   return (
-    <div className=' flex flex-col  items-center mb-2 md:m-1 shadow-lg rounded-xl  '>
+    <div className=' flex flex-col  items-center mb-2 md:m-4 shadow-lg rounded-xl w-max '>
       <Image
         className={'rounded-t-xl'}
         src={img}

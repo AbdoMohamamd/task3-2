@@ -54,7 +54,7 @@ const AboutUs = () => {
         //Adding the dynamic banner component for the AboutUs page
       />
       <section
-        className=' block mt-0 mb-4 mx-auto text-center md:flex md:justify-center  md:flex-wrap container '
+        className=' flex  flex-wrap justify-center mt-0 mb-4 mx-auto text-center container '
         ref={imgSectionRef}
       >
         <div className='w-full flex justify-end'>

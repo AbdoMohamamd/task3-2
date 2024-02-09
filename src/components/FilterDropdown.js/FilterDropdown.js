@@ -11,7 +11,7 @@ const FilterDropdown = ({ options, onFilterChange }) => {
 
   return (
     <div className='mb-4  w-max'>
-      <label className='block text-sm font-medium text-gray-700 text-start'>
+      <label className='block text-sm font-medium text-gray-700 text-start '>
         Filter by:
       </label>
       <select
