@@ -11,8 +11,9 @@ const Form = ({title}) => {
         type='text'
         id='firstName'
         name='firstName'
+        placeholder='First Name'
         required
-        className={'p-2 mb-4 rounded-xl w-full border border-gray-400 border-solid' }
+        className={'p-2 mb-4 rounded-xl w-full border border-gray-400 border-solid ' }
       />
         <label htmlFor='lastName' className={'mb-3 text-1xl w-full'}>
        Last Name:
@@ -21,6 +22,7 @@ const Form = ({title}) => {
         type='text'
         id='lastName'
         name='lastName'
+        placeholder='Last Name'
         required
         className={'p-2 mb-4 rounded-xl w-full border border-gray-400 border-solid' }
       />
@@ -32,6 +34,7 @@ const Form = ({title}) => {
         type='email'
         id='email'
         name='email'
+        placeholder='Email'
         required
         className={'p-2 mb-4 rounded-xl w-full border border-gray-400 border-solid' }
       />
