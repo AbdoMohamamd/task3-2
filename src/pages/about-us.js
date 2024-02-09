@@ -25,7 +25,7 @@ const AboutUs = () => {
   const options = [
     { index: -1, option: 'All' },
     { index: 0, option: 'Waves art' },
-    
+
     { index: 1, option: 'Rocks at the beach' },
     { index: 2, option: 'Blue flower' },
     { index: 3, option: 'Sunset' },
@@ -36,9 +36,8 @@ const AboutUs = () => {
     console.log(cards)
     if (selectedCategory != -1) {
       setFilteredItems([cards[selectedCategory]])
-    }else{
-
-      setFilteredItems(cards);
+    } else {
+      setFilteredItems(cards)
     }
   }
   return (
@@ -51,11 +50,11 @@ const AboutUs = () => {
         sectionRef={imgSectionRef}
         //Adding the dynamic banner component for the AboutUs page
       />
-      <section className='flex flex-col items-end '>
+      <section className='flex flex-col items-end m-2 '>
         <FilterDropdown options={options} onFilterChange={handleFilterChange} />
       </section>
       <section
-        className='w-56 block mt-0 mb-0 mx-auto text-center md:flex md:justify-center md:w-99 md:flex-wrap'
+        className='w-56 block mt-0 mb-0 mx-auto text-center md:flex md:justify-center md:w-99 md:flex-wrap '
         ref={imgSectionRef}
       >
         {filteredItems.map((card, index) => (

@@ -46,7 +46,7 @@ export default function Home () {
         background={'bg-banner'}
         sectionRef={imgSectionRef}
       />
-       <section className='flex flex-col items-end '>
+       <section className='flex flex-col items-end m-2'>
         <FilterDropdown options={options} onFilterChange={handleFilterChange} />
       </section>
       <section
