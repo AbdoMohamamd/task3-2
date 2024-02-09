@@ -1,15 +1,15 @@
-import React from 'react';
-import Select from 'react-select';
+import React from 'react'
+import Select from 'react-select'
 
 const MultiSelectFilter = ({ options, selectedValues, onChange }) => {
-    const customStyles = {
-        control: (provided) => ({
-          ...provided,
-          minWidth: '250px', // Adjust the width as needed
-        }),
-      };
-    
-    return (
+  const customStyles = {
+    control: provided => ({
+      ...provided,
+      minWidth: '250px' // Adjust the width as needed
+    })
+  }
+
+  return (
     <Select
       isMulti
       options={options}
@@ -18,7 +18,7 @@ const MultiSelectFilter = ({ options, selectedValues, onChange }) => {
       isSearchable={false}
       styles={customStyles}
     />
-  );
-};
+  )
+}
 
-export default MultiSelectFilter;
+export default MultiSelectFilter

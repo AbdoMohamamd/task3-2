@@ -1,20 +1,16 @@
 import React, { useRef, useState } from 'react'
 import Banner from '@/components/Banner/Banner'
 import PhotoWithText from '@/components/PhotoWithText/PhotoWithText'
-
 import img1 from '../../public/images/img1.jpg'
 import img2 from '../../public/images/img2.jpg'
 import img3 from '../../public/images/img3.png'
 import img4 from '../../public/images/img4.jpg'
 import img5 from '../../public/images/img5.jpg'
 import img6 from '../../public/images/img6.jpg'
-
-import Filter from '@/components/FilterDropdown.js/FilterDropdown'
-import FilterDropdown from '@/components/FilterDropdown.js/FilterDropdown'
 import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
-//first we import all the images and component we are gonna use in the AboutUs page
+
 const AboutUs = () => {
-  const imgSectionRef = useRef(null) //The reference we are gonna use in the start now function
+  const imgSectionRef = useRef(null) // Reference for scrolling
   const options = [
     { value: 0, label: 'Waves art', img: img1 },
     { value: 1, label: 'Rocks at the beach', img: img2 },
@@ -28,21 +24,23 @@ const AboutUs = () => {
   const handleMultiSelectChange = selectedOptions => {
     setSelectedValues(selectedOptions)
   }
+
   return (
     <div>
-      {' '}
+      {/* Banner component */}
       <Banner
         title={'Welcome to the AboutUs page'}
-        phrase={'Here are some information aboutUs'}
+        phrase={'Here are some information about Us'}
         background={'bg-aboutUs'}
         sectionRef={imgSectionRef}
-        //Adding the dynamic banner component for the AboutUs page
       />
+      {/* Section with images and filters */}
       <section
-        className=' flex  flex-wrap justify-center mt-0 mb-4 mx-auto text-center container '
+        className='flex flex-wrap justify-center mt-0 mb-4 mx-auto text-center container'
         ref={imgSectionRef}
       >
         <div className='w-full flex justify-end'>
+          {/* MultiSelectFilter component */}
           <MultiSelectFilter
             options={options}
             selectedValues={selectedValues}
@@ -50,6 +48,7 @@ const AboutUs = () => {
           />
         </div>
 
+        {/* Displaying images based on selected values */}
         {selectedValues.length === 0
           ? options.map((card, index) => (
               <PhotoWithText img={card.img} text={card.label} key={index} />

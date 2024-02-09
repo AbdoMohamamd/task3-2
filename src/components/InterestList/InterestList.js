@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import RadioInput from '../RadioInput/RadioInput.js'
 
-
-const IndexPage = () => {
+const InterestList = () => {
+  // State to track the selected radio option and the result message
   const [selectedOption, setSelectedOption] = useState(-1)
   const [choosedOption, setChoosedOption] = useState('')
+
   // Options for the radio input list
   const options = [
     'Coding and Tech',
@@ -16,29 +17,35 @@ const IndexPage = () => {
 
   // Function to handle radio input change
   const handleRadioChange = event => {
-    // console.log(event.target.value)
     setSelectedOption(event.target.value)
   }
+
+  // Function to handle button click
   const handleButtonClick = event => {
     if (selectedOption === -1) {
+      // If no option is selected, set a message
       setChoosedOption('Please select an option')
     } else {
+      // If an option is selected, set a message with the chosen option
       event.preventDefault()
       setChoosedOption('You are interested in ' + options[selectedOption])
     }
   }
 
   return (
-    <form className='flex flex-col items-center shadow-top    '>
-      <h2 className={'m-4 font-bold text-2xl  text-center'}>
+    <form className='flex flex-col items-center shadow-top'>
+      {/* Form title */}
+      <h2 className={'m-4 font-bold text-2xl text-center'}>
         Choose your interest
       </h2>
+
+      {/* Radio input options */}
       <ul>
         {options.map((option, index) => (
           <li key={index}>
+            {/* RadioInput component for each option */}
             <RadioInput
               name='options'
-              
               value={index}
               label={option}
               onChange={handleRadioChange}
@@ -46,6 +53,8 @@ const IndexPage = () => {
           </li>
         ))}
       </ul>
+
+      {/* Choose button */}
       <input
         type='button'
         className={
@@ -54,9 +63,11 @@ const IndexPage = () => {
         value={'Choose'}
         onClick={handleButtonClick}
       />
+
+      {/* Result message */}
       <p className='mb-2'>{choosedOption}</p>
     </form>
   )
 }
 
-export default IndexPage
+export default InterestList

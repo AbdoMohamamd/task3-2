@@ -1,17 +1,17 @@
-import Footer from "@/components/Footer/Footer";
-import NavBar from "@/components/NavBar/NavBar";
-import { Html, Head, Main, NextScript } from "next/document";
+import Footer from '@/components/Footer/Footer'
+import NavBar from '@/components/NavBar/NavBar'
+import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
+export default function Document () {
   return (
-    <Html lang="en">
+    <Html lang='en'>
       <Head />
-      <body >
-      <NavBar/>
+      <body>
+        <NavBar />
         <Main />
         <NextScript />
-        <Footer/>
+        <Footer />
       </body>
     </Html>
-  );
+  )
 }
