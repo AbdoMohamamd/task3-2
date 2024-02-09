@@ -1,7 +1,7 @@
 import Banner from '../components/Banner/Banner'
 import PhotoWithText from '../components/PhotoWithText/PhotoWithText'
-import img1 from '../../public/img1.jpg'
-import img2 from '../../public/img2.jpg'
+import img1 from '../../public/images/img1.jpg'
+import img2 from '../../public/images/img2.jpg'
 import React,{ useRef } from 'react'
 import Form from '../components/Form/Form'
 export default function Home () {

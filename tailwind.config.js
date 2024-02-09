@@ -9,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        banner: "url('../../public/banner.jpg')",
-        aboutUs: "url('../../public/aboutUs.jpg')",
-        contactUs: "url('../../public/contactUs.jpg')"
+        banner: "url('../../public/images/banner.jpg')",
+        aboutUs: "url('../../public/images/aboutUs.jpg')",
+        contactUs: "url('../../public/images/contactUs.jpg')"
       },
       width: {
         100: '70em',

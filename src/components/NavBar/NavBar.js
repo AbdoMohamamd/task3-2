@@ -4,7 +4,7 @@ import Menu from '../Menu/Menu'
 import Link from 'next/link'
 
 import Image from 'next/image'
-import logo from '../../../public/logo.png'
+import logo from '../../../public/images/logo.png'
 import { useState } from 'react'
 
 const NavBar = () => {

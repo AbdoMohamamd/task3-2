@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '../../../public/logo.png'
-import Twitter from '../../../public/twitter.jpg'
-import Facebook from '../../../public/facebook.png'
+import Logo from '../../../public/images/logo.png'
+import Twitter from '../../../public/images/twitter.jpg'
+import Facebook from '../../../public/images/facebook.png'
 const Footer = () => {
   return (
     <footer
