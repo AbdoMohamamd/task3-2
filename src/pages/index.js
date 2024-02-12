@@ -11,6 +11,7 @@ import img6 from '../../public/images/img6.jpg'
 import SwiperBanner from '@/components/SwiperBanner/SwiperBanner'
 import NavBar from '@/components/NavBar/NavBar'
 import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
+import Accordion from '@/components/Accordion/Accordion'
 
 export default function Home () {
   const options = [
@@ -23,23 +24,42 @@ export default function Home () {
   ]
   const slides = [
     {
-      id: 0,
       title: 'Welcome to creohub',
       label: 'Gain experience',
       img: 'bg-slide1'
     },
     {
-      id: 1,
       title: 'Multiple fields',
       label: 'Frontend , backend , UI/UX design, mobile',
       img: 'bg-slide2'
     },
     {
-      id: 2,
       title: 'Our Services',
       label: 'A intership program depending on what you like',
       img: 'bg-slide3'
     }
+  ]
+  const accordionItems = [
+    {
+      title: 'What programming languages do you support?',
+      content: 'We support a wide range of programming languages, including but not limited to JavaScript, Python, Java, C++, and Ruby. Our platform is designed to accommodate diverse development needs.',
+    },
+    {
+      title: 'How do I get started with programming?',
+      content: 'To get started with programming, we recommend selecting a programming language based on your goals and interests. There are many online resources, tutorials, and courses available to help beginners learn the basics and progress in their coding journey.',
+    },
+    {
+      title: 'Do you provide documentation for your APIs?',
+      content: 'Yes, we offer comprehensive documentation for all our APIs. You can find detailed information, including endpoints, request and response formats, and example code snippets, in our API documentation section.',
+    },
+    {
+      title: 'Can I contribute to your open-source projects?',
+      content: 'Absolutely! We welcome contributions from the community. You can find our open-source projects on GitHub. Feel free to fork the repository, make changes, and submit a pull request. Check our contribution guidelines for more details.',
+    },
+    {
+      title: 'How do I troubleshoot common programming errors?',
+      content: "When facing programming errors, it's essential to carefully review your code, check for syntax errors, and consult relevant documentation. Additionally, online communities and forums are valuable resources where you can seek help from experienced developers.",
+    },
   ]
 
   const imgSectionRef = useRef(null)
@@ -83,6 +103,9 @@ export default function Home () {
               <PhotoWithText img={card.img} text={card.label} key={index} />
             ))}
       </section>
+      
+        <Accordion items={accordionItems} />
+    
     </div>
   )
 }

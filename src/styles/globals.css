@@ -14,8 +14,8 @@
 }
 
 :root {
-    --swiper-pagination-color:#1065aa;
-    --swiper-pagination-bullet-inactive-color: white;
+    --swiper-pagination-color:white;
+    --swiper-pagination-bullet-inactive-color: #1065aa;
     --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
