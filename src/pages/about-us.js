@@ -23,7 +23,7 @@ const AboutUs = () => {
   const slides = [
     {
       id: 0,
-      title: 'Welcome to creohub',
+      title: 'About Us',
       label: 'At creohub we offer internships for creative people',
       img: 'bg-slide1'
     },
