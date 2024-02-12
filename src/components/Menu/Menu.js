@@ -7,7 +7,7 @@ const Menu = ({ show }) => {
   return (
     <ul
       // Conditional classes for mobile and desktop views
-      className={`flex-col max-h-full fixed justify-center top-0 right-0 left-0 list-none bg-white max-w-full md:flex md:static md:flex-row md:justify-end md:w-100 ${
+      className={`flex-col max-h-full fixed justify-center top-0 right-0 left-0 list-none bg-white max-w-full md:flex md:static md:flex-row md:justify-end md:w-100 z-10 ${
         show ? 'flex' : 'hidden'
       }`}
     >

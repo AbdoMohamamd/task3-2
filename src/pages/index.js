@@ -9,6 +9,7 @@ import img5 from '../../public/images/img5.jpg'
 import img6 from '../../public/images/img6.jpg'
 import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
 import SwiperBanner from '@/components/SwiperBanner/SwiperBanner'
+import NavBar from '@/components/NavBar/NavBar'
 
 export default function Home () {
   const options = [
@@ -56,9 +57,7 @@ export default function Home () {
         background={'bg-banner'}
         sectionRef={imgSectionRef}
       /> */}
-      <SwiperBanner
-       slides={slides}
-      />
+      <SwiperBanner slides={slides} />
 
       {/* Section with images and filters */}
       <section

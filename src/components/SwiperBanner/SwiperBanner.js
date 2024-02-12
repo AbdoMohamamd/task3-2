@@ -1,6 +1,6 @@
 import React from 'react'
 // import Swiper core and required modules
-import { Pagination, A11y, Autoplay, EffectFade } from 'swiper/modules'
+import { Pagination, A11y, Autoplay, EffectFade,Navigation } from 'swiper/modules'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
+import 'swiper/css/navigation'
 
 const SwiperBanner = ({ slides }) => {
   return (
@@ -17,9 +18,10 @@ const SwiperBanner = ({ slides }) => {
       }
     >
       <Swiper
-        modules={[Pagination, A11y, Autoplay, EffectFade]}
+        modules={[Pagination, A11y, Autoplay, EffectFade,Navigation]}
         effect='fade'
-        looping={true}
+        navigation
+        loop={true}
         slidesPerView={1}
         pagination={{ clickable: true }}
         className=' h-screen'

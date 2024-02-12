@@ -1,13 +1,14 @@
-import React from 'react';
-import Menu from '../Menu/Menu';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../../../public/images/logo.png';
-import { useState } from 'react';
+'use client'
+import React from 'react'
+import Menu from '../Menu/Menu'
+import Link from 'next/link'
+import Image from 'next/image'
+import logo from '../../../public/images/logo.png'
+import { useState } from 'react'
 
 const NavBar = () => {
   // State to track whether the menu is open or closed
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false)
 
   return (
     <nav className='bg-white'>
@@ -18,8 +19,17 @@ const NavBar = () => {
         }
       >
         {/* Logo */}
-        <Link href='/' className='m-2 rounded-full bg-white hover:bg-gray-300 p-1'>
-          <Image src={logo} width={46} height={46} alt='logo' loading={'eager'} />
+        <Link
+          href='/'
+          className='m-2 rounded-full bg-white hover:bg-gray-300 p-1'
+        >
+          <Image
+            src={logo}
+            width={46}
+            height={46}
+            alt='logo'
+            loading={'eager'}
+          />
         </Link>
 
         {/* Menu component */}
@@ -27,12 +37,12 @@ const NavBar = () => {
 
         {/* Hamburger menu icon */}
         <div
-          className={`${
-            isMenuOpen ? 'fixed right-5' : ''
-          } ${'inline cursor-pointer md:hidden'}`}
           onClick={() => {
-            setMenuOpen(!isMenuOpen);
+            setMenuOpen(!isMenuOpen)
           }}
+          className={`${
+            isMenuOpen ? 'fixed right-2 z-10' : ''
+          } ${'inline cursor-pointer md:hidden'}`}
         >
           {/* Hamburger menu bars */}
           <div
@@ -57,7 +67,7 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar
