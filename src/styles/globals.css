@@ -13,14 +13,18 @@
     src: url(../../public/fonts/Helvetica-Bold.ttf);
 }
 
-
 .helvetica-bold {
     font-family: Helvetica-bold;
 }
 
+.swiper-button-prev::after{
+color:white
+}
+
+.swiper-button-next::after {color:white;}
 
 
- * {
+* {
 
     margin: 0;
     padding: 0;
