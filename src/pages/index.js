@@ -7,9 +7,10 @@ import img3 from '../../public/images/img3.png'
 import img4 from '../../public/images/img4.jpg'
 import img5 from '../../public/images/img5.jpg'
 import img6 from '../../public/images/img6.jpg'
-import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
+
 import SwiperBanner from '@/components/SwiperBanner/SwiperBanner'
 import NavBar from '@/components/NavBar/NavBar'
+import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
 
 export default function Home () {
   const options = [
