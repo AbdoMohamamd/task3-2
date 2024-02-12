@@ -8,6 +8,7 @@ import img4 from '../../public/images/img4.jpg'
 import img5 from '../../public/images/img5.jpg'
 import img6 from '../../public/images/img6.jpg'
 import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
+import SwiperBanner from '@/components/SwiperBanner/SwiperBanner'
 
 const AboutUs = () => {
   const imgSectionRef = useRef(null) // Reference for scrolling
@@ -19,6 +20,26 @@ const AboutUs = () => {
     { value: 4, label: 'Fox', img: img5 },
     { value: 5, label: 'Night City', img: img6 }
   ]
+  const slides = [
+    {
+      id: 0,
+      title: 'Welcome to creohub',
+      label: 'At creohub we offer internships for creative people',
+      img: 'bg-slide1'
+    },
+    {
+      id: 1,
+      title: 'Founded in 2013',
+      label: 'We have 10+ years of experience in web and software development',
+      img: 'bg-slide2'
+    },
+    {
+      id: 2,
+      title: 'Why choose Us',
+      label: 'Experience , Quality , Innovation',
+      img: 'bg-slide3'
+    }
+  ]
   const [selectedValues, setSelectedValues] = useState([])
 
   const handleMultiSelectChange = selectedOptions => {
@@ -28,12 +49,13 @@ const AboutUs = () => {
   return (
     <div>
       {/* Banner component */}
-      <Banner
+      {/* <Banner
         title={'Welcome to the AboutUs page'}
         phrase={'Here are some information about Us'}
         background={'bg-aboutUs'}
         sectionRef={imgSectionRef}
-      />
+      /> */}
+       <SwiperBanner slides={slides} />
       {/* Section with images and filters */}
       <section
         className='flex flex-wrap justify-center mt-0 mb-4 mx-auto text-center container'
@@ -57,6 +79,7 @@ const AboutUs = () => {
               <PhotoWithText img={card.img} text={card.label} key={index} />
             ))}
       </section>
+     
     </div>
   )
 }

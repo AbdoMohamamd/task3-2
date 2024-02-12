@@ -7,8 +7,8 @@ import img3 from '../../public/images/img3.png'
 import img4 from '../../public/images/img4.jpg'
 import img5 from '../../public/images/img5.jpg'
 import img6 from '../../public/images/img6.jpg'
-import Form from '../components/Form/Form'
 import MultiSelectFilter from '@/components/MultiSelectFilter/MultiSelectFilter'
+import SwiperBanner from '@/components/SwiperBanner/SwiperBanner'
 
 export default function Home () {
   const options = [
@@ -18,6 +18,26 @@ export default function Home () {
     { value: 3, label: 'Sunset', img: img4 },
     { value: 4, label: 'Fox', img: img5 },
     { value: 5, label: 'Night City', img: img6 }
+  ]
+  const slides = [
+    {
+      id: 0,
+      title: 'Welcome to creohub',
+      label: 'Gain experience',
+      img: 'bg-slide1'
+    },
+    {
+      id: 1,
+      title: 'Multiple fields',
+      label: 'Frontend , backend , UI/UX design, mobile',
+      img: 'bg-slide2'
+    },
+    {
+      id: 2,
+      title: 'Our Services',
+      label: 'A intership program depending on what you like',
+      img: 'bg-slide3'
+    }
   ]
 
   const imgSectionRef = useRef(null)
@@ -30,11 +50,14 @@ export default function Home () {
   return (
     <div>
       {/* Banner component for the home page */}
-      <Banner
+      {/* <Banner
         title={'Welcome to the home page'}
         phrase={'This is the main page of the website'}
         background={'bg-banner'}
         sectionRef={imgSectionRef}
+      /> */}
+      <SwiperBanner
+       slides={slides}
       />
 
       {/* Section with images and filters */}
