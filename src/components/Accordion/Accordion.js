@@ -28,8 +28,8 @@ const Accordion = ({ items }) => {
               </span>
             </div>
 
-            {index === activeIndex && (
-              <div className='p-4 bg-gray-100 text-start '>
+            { (
+              <div className={`${index === activeIndex ? 'block transition-transform transform ':'hidden '} p-4 bg-gray-100 text-start  `}>
                 <hr class=' border-black mb-4' />
                 <p className='mt-6'>{item.content}</p>
               </div>
