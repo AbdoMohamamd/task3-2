@@ -13,17 +13,25 @@
     src: url(../../public/fonts/Helvetica-Bold.ttf);
 }
 
+:root {
+    --swiper-pagination-color:#1065aa;
+    --swiper-pagination-bullet-inactive-color: white;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
 .helvetica-bold {
     font-family: Helvetica-bold;
 }
 
-.swiper-button-prev::after , .swiper-button-next::after{
+.swiper-button-prev::after,
+.swiper-button-next::after {
     color: white;
     font-weight: 900;
-    
+
 }
 
-.swiper-button-next,.swiper-button-prev{
+.swiper-button-next,
+.swiper-button-prev {
     margin: 2em;
 }
 
